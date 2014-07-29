@@ -1,0 +1,5 @@
+<h4>Hi <%= session[:player_name] %></h4>
+Your cards are:
+<%= session[:player_cards].each do |cards|
+	puts cards
+end %>
