@@ -1,5 +1,21 @@
-<h4>Hi <%= session[:player_name] %></h4>
-Your cards are:
-<%= session[:player_cards].each do |cards|
-	puts cards
-end %>
+<h3>BlackJack!</h3>
+<h4>Welcome <%= session[:player_name].capitalize %></h4>
+You have:
+<ul>
+<% session[:player_cards].each do |cards| %>
+	<li><%= cards %></li>
+<% end %>
+</ul>
+<br/>
+Dealer has:
+<ul>
+<% session[:dealer_cards].each do |cards| %>
+	<li><%= cards %></li>
+<% end %>
+</ul>
+<% img src='C:/tealeaf/week3/tl-blackjack-webapp/tl-blackjack-webapp/public/images/cards/clubs_2' %>
+
+<form action='hit' method='post'>
+	<input type='submit' class='btn'/>
+</form>
+
