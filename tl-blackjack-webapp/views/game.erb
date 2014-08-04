@@ -13,8 +13,8 @@ Dealer has:
 	<li><%= cards %></li>
 <% end %>
 </ul>
-<% img src='C:/tealeaf/week3/tl-blackjack-webapp/tl-blackjack-webapp/public/images/cards/clubs_2' %>
 
+<%= session[:player_name].capitalize %> has <%= calculate_total(session[:player_cards]) %>
 <form action='hit' method='post'>
 	<input type='submit' class='btn'/>
 </form>
